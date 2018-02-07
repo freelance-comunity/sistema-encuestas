@@ -162,7 +162,10 @@ return [
 		Conner\Tagging\Providers\TaggingServiceProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
 		Watson\BootstrapForm\BootstrapFormServiceProvider::class,
-		Spatie\Permission\PermissionServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        
+        Roland\Crud\CrudServiceProvider::class,
+
     ],
 
     /*

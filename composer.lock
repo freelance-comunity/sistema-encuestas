@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "839314275f248a52c50d7600c9ad64d7",
+    "content-hash": "91cb51047a9a60b772b1fe64fcdc8dea",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -734,6 +734,39 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "roland/crud",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roladn/laravelcrud.git",
+                "reference": "c5a6c045801ae3038b95eda9a72f2ff3f0134181"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roladn/laravelcrud/zipball/c5a6c045801ae3038b95eda9a72f2ff3f0134181",
+                "reference": "c5a6c045801ae3038b95eda9a72f2ff3f0134181",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Roland\\Crud\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roland Alla",
+                    "email": "alla.roland@gmail.com"
+                }
+            ],
+            "description": "This is a CRUD generator for Laravel 5.4",
+            "time": "2017-10-25T10:59:55+00:00"
         },
         {
             "name": "rtconner/laravel-tagging",
@@ -3545,7 +3578,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "roland/crud": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

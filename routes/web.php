@@ -14,3 +14,13 @@
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/', 'HomeController@index');
+
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/posts', 'Admin\\PostsController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('school/student', 'School\\StudentController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('school/teacher', 'School\\TeacherController');
+});
