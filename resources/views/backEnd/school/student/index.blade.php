@@ -7,7 +7,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
-            <strong>Mensaje del sistema:</strong> {{ session()->get('message') }}
+             <h3><strong>Mensaje del sistema:</strong> {{ session()->get('message') }}</h3>
         </div>
     </div>
     @endif

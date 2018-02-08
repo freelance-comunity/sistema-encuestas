@@ -7,41 +7,40 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
-             <h3><strong>Mensaje del sistema:</strong> {{ session()->get('message') }}</h3>
+            <h3><strong>Mensaje del sistema:</strong> {{ session()->get('message') }}</h3>
         </div>
     </div>
     @endif
-    <h1>Catálogo de maestros
-        <a href="{{ url('school/teacher/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Maestro</a>
+    <h1>Catálogo de planteles
+        <a href="{{ url('campus/campus/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Plantel</a>
     </h1>
     <div class="table table-responsive">
-        <table class="table table-striped jambo_table bulk_action" id="teacher">
+        <table class="table table-striped jambo_table bulk_action" id="campus">
             <thead class="heading">
                 <tr>
                     <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido paterno</th>
-                    <th>Apellido materno</th>
-                    <th>Acciones</th>
+                    <th>Campus Id</th>
+                    <th>Name</th>
+                    <th>Corporate Name</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($teacher as $item)
+                @foreach($campus as $item)
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>
-                        <a href="{{ url('school/teacher', $item->id) }}">{{ $item->name }}</a>
+                        <a href="{{ url('campus/campus', $item->id) }}">{{ $item->campus_id }}</a>
                     </td>
-                    <td>{{ $item->last_name }}</td>
-                    <td>{{ $item->second_lastname }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->corporate_name }}</td>
                     <td>
-                        <a href="{{ url('school/teacher/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
-                        {!! Form::open([ 'method'=>'DELETE', 'url' => ['school/teacher', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Eliminar',
+                        <a href="{{ url('campus/campus/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
+                        {!! Form::open([ 'method'=>'DELETE', 'url' => ['campus/campus', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Eliminar',
                         ['class' => 'btn btn-danger btn-xs']) !!} {!! Form::close() !!}
                     </td>
                 </tr>
                 @endforeach
-            </tbody>
         </table>
     </div>
 </div>
@@ -49,7 +48,7 @@
 @endsection @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#teacher').DataTable({
+        $('#campus').DataTable({
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
             },

@@ -38,7 +38,7 @@
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="#">Plantel</a>
+                                <a href="{{url('/campus/campus')}}">Plantel</a>
                             </li>
                             <li>
                                 <a href="form_advanced.html">Asignaturas</a>
@@ -75,7 +75,7 @@
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="tables.html">Profesores</a>
+                                <a href="{{url('/school/teacher')}}">Profesores</a>
                             </li>
                             <li>
                                 <a href="tables_dynamic.html">Asignación de clases</a>

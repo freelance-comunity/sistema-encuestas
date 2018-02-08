@@ -46,7 +46,7 @@ class TeacherController extends Controller
 
         Teacher::create($request->all());
 
-        Session::flash('message', 'Teacher added!');
+        Session::flash('message', 'Maestro agregado.');
         Session::flash('status', 'success');
 
         return redirect('school/teacher');
@@ -94,7 +94,7 @@ class TeacherController extends Controller
         $teacher = Teacher::findOrFail($id);
         $teacher->update($request->all());
 
-        Session::flash('message', 'Teacher updated!');
+        Session::flash('message', 'Maestro actualizado.');
         Session::flash('status', 'success');
 
         return redirect('school/teacher');
@@ -113,7 +113,7 @@ class TeacherController extends Controller
 
         $teacher->delete();
 
-        Session::flash('message', 'Teacher deleted!');
+        Session::flash('message', 'Maestro eliminado.');
         Session::flash('status', 'success');
 
         return redirect('school/teacher');

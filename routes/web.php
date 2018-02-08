@@ -24,3 +24,6 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('school/teacher', 'School\\TeacherController');
 });
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/campus', 'Campus\\CampusController');
+});
