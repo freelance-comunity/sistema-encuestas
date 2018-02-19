@@ -229,7 +229,7 @@
                     <div class="form-group {{ $errors->has('school_origin_id') ? 'has-error' : ''}}">
                         {!! Form::label('school_origin_id', 'Nombre de escuela', ['class' => 'col-sm-3 control-label']) !!}
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            {!! Form::number('school_origin_id', null, ['class' => 'form-control']) !!} {!! $errors->first('school_origin_id', '
+                            {!! Form::select('school_origin_id', $schools,null, ['class' => 'form-control']) !!} {!! $errors->first('school_origin_id', '
                             <p class="help-block">:message</p>') !!}
                         </div>
                     </div>

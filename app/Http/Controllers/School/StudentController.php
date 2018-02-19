@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Student;
+use App\School;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
@@ -31,8 +32,10 @@ class StudentController extends Controller
      * @return Response
      */
     public function create()
-    {
-        return view('backEnd.school.student.create');
+    {   
+        $schools = School::pluck('name', 'id');
+        return view('backEnd.school.student.create')
+        ->with('schools', $schools);
     }
 
     /**
@@ -76,8 +79,9 @@ class StudentController extends Controller
     public function edit($id)
     {
         $student = Student::findOrFail($id);
+        $schools = School::pluck('name', 'id');
 
-        return view('backEnd.school.student.edit', compact('student'));
+        return view('backEnd.school.student.edit', compact('student', 'schools'));
     }
 
     /**

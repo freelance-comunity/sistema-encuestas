@@ -27,3 +27,21 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('campus/campus', 'Campus\\CampusController');
 });
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/department', 'Campus\\DepartmentController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('school/school', 'School\\SchoolController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/career', 'Campus\\CareerController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/subject', 'Campus\\SubjectController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/group', 'Campus\\GroupController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/study', 'Campus\\StudyController');
+});

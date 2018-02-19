@@ -41,16 +41,22 @@
                                 <a href="{{url('/campus/campus')}}">Plantel</a>
                             </li>
                             <li>
-                                <a href="form_advanced.html">Asignaturas</a>
+                                <a href="form_advanced.html">Ciclos administrativos</a>
                             </li>
                             <li>
-                                <a href="form_validation.html">Carreras</a>
+                                <a href="{{url('/campus/department')}}">Departamentos</a>
                             </li>
                             <li>
-                                <a href="form_wizards.html">Grupos</a>
+                                <a href="{{url('/campus/career')}}">Carreras</a>
                             </li>
                             <li>
-                                <a href="form_upload.html">Planes</a>
+                                <a href="{{url('/campus/subject')}}">Asignaturas</a>
+                            </li>
+                            <li>
+                                <a href="{{url('/campus/group')}}">Grupos</a>
+                            </li>
+                            <li>
+                                <a href="{{url('/campus/study')}}">Planes</a>
                             </li>
                         </ul>
                     </li>
@@ -64,7 +70,7 @@
                                 <a href="{{url('/school/student')}}">Alumnos</a>
                             </li>
                             <li>
-                                <a href="media_gallery.html">Escuelas de procedencia</a>
+                                <a href="{{url('/school/school')}}">Escuelas de procedencia</a>
                             </li>
                         </ul>
                     </li>
