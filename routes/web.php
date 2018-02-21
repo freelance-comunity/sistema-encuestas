@@ -45,3 +45,12 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('campus/study', 'Campus\\StudyController');
 });
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('campus/cycle', 'Campus\\CycleController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/user', 'Admin\\UserController');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('admin/role', 'Admin\\RoleController');
+});

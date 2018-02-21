@@ -30,7 +30,8 @@
         "laravelcollective/html": "^5.3.0",
 	  	"watson/bootstrap-form": "1.1.*",
         "spatie/laravel-permission": "^2.3",
-        "roland/crud": "dev-master"
+        "roland/crud": "dev-master",
+        "laravel/tinker": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

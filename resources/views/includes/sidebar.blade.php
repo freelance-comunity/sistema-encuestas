@@ -41,7 +41,7 @@
                                 <a href="{{url('/campus/campus')}}">Plantel</a>
                             </li>
                             <li>
-                                <a href="form_advanced.html">Ciclos administrativos</a>
+                                <a href="{{url('/campus/cycle+')}}">Ciclos administrativos</a>
                             </li>
                             <li>
                                 <a href="{{url('/campus/department')}}">Departamentos</a>
@@ -100,10 +100,7 @@
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="e_commerce.html">E-commerce</a>
-                            </li>
-                            <li>
-                                <a href="projects.html">Projects</a>
+                                <a href="{{url('/admin/user')}}">Ver usuarios</a>
                             </li>
                         </ul>
                     </li>
@@ -114,10 +111,7 @@
                         </a>
                         <ul class="nav child_menu">
                             <li>
-                                <a href="page_403.html">403 Error</a>
-                            </li>
-                            <li>
-                                <a href="page_404.html">404 Error</a>
+                                <a href="{{url('/admin/role')}}">Ver roles</a>
                             </li>
                         </ul>
                     </li>

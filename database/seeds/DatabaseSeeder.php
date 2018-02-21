@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Permission;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -12,5 +12,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        // Seed the default permissions
+        $permissions = Permission::defaultPermissions();
+
+        foreach ($permissions as $perms) {
+            Permission::firstOrCreate(['name' => $perms]);
+        }
+
+        $this->command->info('Default Permissions added.');
     }
 }

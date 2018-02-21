@@ -165,6 +165,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         
         Roland\Crud\CrudServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
 
     ],
 

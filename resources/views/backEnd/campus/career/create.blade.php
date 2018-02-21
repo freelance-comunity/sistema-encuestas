@@ -21,64 +21,64 @@
                     {!! Form::open(['url' => 'campus/career', 'class' => 'form-horizontal']) !!}
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-                        {!! Form::label('name', 'Nombre de carrera: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('name', 'Nombre de carrera: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('name', '
                             <p
                                 class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('career_key') ? 'has-error' : ''}}">
-                        {!! Form::label('career_key', 'Clave: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('career_key', 'Clave: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::text('career_key', null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('career_key',
                             '
                             <p class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
-                        {!! Form::label('description', 'Descripción: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('description', 'Descripción: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::textarea('description', null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('description',
                             '
                             <p class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('dependence') ? 'has-error' : ''}}">
-                        {!! Form::label('dependence', 'Dependecia: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('dependence', 'Dependecia: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::text('dependence', null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('dependence',
                             '
                             <p class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('key_incorporation') ? 'has-error' : ''}}">
-                        {!! Form::label('key_incorporation', 'Clave de incorporación: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('key_incorporation', 'Clave de incorporación: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::text('key_incorporation', null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('key_incorporation',
                             '
                             <p class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('turn') ? 'has-error' : ''}}">
-                        {!! Form::label('turn', 'Turno: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('turn', 'Turno: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::text('turn', null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('turn', '
                             <p
                                 class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('id_department') ? 'has-error' : ''}}">
-                        {!! Form::label('id_department', 'Departamento: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('id_department', 'Departamento: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::select('id_department', $departments,null, ['class' => 'form-control']) !!} {!! $errors->first('id_department', '
                             <p
                                 class="help-block">:message</p>') !!}
                         </div>
                     </div>
                     <div class="form-group {{ $errors->has('campus_id') ? 'has-error' : ''}}">
-                        {!! Form::label('campus_id', 'Plantel: ', ['class' => 'col-sm-3 control-label']) !!}
-                        <div class="col-sm-6">
+                        {!! Form::label('campus_id', 'Plantel: ', ['class' => 'control-label col-md-3 col-sm-3 col-xs-12']) !!}
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             {!! Form::select('campus_id', $campuses,null, ['class' => 'form-control']) !!} {!! $errors->first('campus_id', '
                             <p
                                 class="help-block">:message</p>') !!}
