@@ -41,7 +41,7 @@
                                 <a href="{{url('/campus/campus')}}">Plantel</a>
                             </li>
                             <li>
-                                <a href="{{url('/campus/cycle+')}}">Ciclos administrativos</a>
+                                <a href="{{url('/campus/cycle')}}">Ciclos administrativos</a>
                             </li>
                             <li>
                                 <a href="{{url('/campus/department')}}">Departamentos</a>

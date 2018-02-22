@@ -35,7 +35,7 @@
                     <td>{{ $item->email }}</td>
                     <td>
                         <a href="{{ url('admin/user/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
-                        {!! Form::open([ 'method'=>'DELETE', 'url' => ['admin/user', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Eliminar',
+                        {!! Form::open([ 'method'=>'DELETE', 'url' => ['admin/user', $item->id], 'style' => 'display:inline']) !!} {!! Form::submit('Eliminar',
                         ['class' => 'btn btn-danger btn-xs']) !!} {!! Form::close() !!}
                     </td>
                 </tr>

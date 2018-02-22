@@ -20,6 +20,7 @@ class UserController extends Controller
 
     /**
      * Display a listing of the resource.
+     * 
      *
      * @return Response
      */
@@ -151,7 +152,7 @@ class UserController extends Controller
             Session::flash('message', 'Usuario eliminado.');
             Session::flash('status', 'success');
         } else {
-            Session::flash('message', 'Usuario no eliminado.');
+            Session::flash('message', 'Ocurrio un problema al eliminar el usuario.');
             Session::flash('status', 'success');
         }
 
