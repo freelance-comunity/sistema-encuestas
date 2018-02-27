@@ -12,32 +12,34 @@
         </div>
     </div>
     @endif
-    <h1>Catálogo de departamentos
-        <a href="{{ url('campus/department/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nuevo Departamento</a>
+    <h1>Catalogo de encuestas
+        <a href="{{ url('poll/poll/create') }}" class="btn btn-primary pull-right btn-sm">Agregar Nueva Encuesta</a>
     </h1>
     <div class="table table-responsive">
-        <table class="table table-striped jambo_table bulk_action" id="department">
-            <thead class="heading">
+        <table class="table table-striped jambo_table bulk_action" id="poll">
+            <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
+                    <th>Tipo</th>
                     <th>Descripción</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($department as $item)
+                @foreach($poll as $item)
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>
-                        <a href="{{ url('campus/department', $item->id) }}">{{ $item->name }}</a>
+                        <a href="{{ url('poll/poll', $item->id) }}">{{ $item->name }}</a>
                     </td>
+                    <td>{{ $item->type }}</td>
+                    <td>{{ $item->description }}</td>
                     <td>
-                        @if($item->description) {{ $item->description }} @else NA @endif
-                    </td>
-                    <td>
-                        <a href="{{ url('campus/department/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
-                        {!! Form::open([ 'method'=>'DELETE', 'url' => ['campus/department', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Eliminar',
+                        <a href="{{ url('addQuestion')}}/{{$item->id}}" class="btn btn-success btn-xs"><i class="fa fa-plus"></i> Agregar pregunta</a>
+                        <a href="#" class="btn btn-warning btn-xs"><i class="fa fa-eye"></i> Vista prevía</a>
+                        <a href="{{ url('poll/poll/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Actualizar</a>
+                        {!! Form::open([ 'method'=>'DELETE', 'url' => ['poll/poll', $item->id], 'style' => 'display:inline' ]) !!} {!! Form::submit('Eliminar',
                         ['class' => 'btn btn-danger btn-xs']) !!} {!! Form::close() !!}
                     </td>
                 </tr>
@@ -51,10 +53,7 @@
 @endsection @push('scripts')
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#department').DataTable({
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-            },
+        $('#poll').DataTable({
             columnDefs: [{
                 targets: [0],
                 visible: false,

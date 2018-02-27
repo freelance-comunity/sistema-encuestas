@@ -54,3 +54,10 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('admin/role', 'Admin\\RoleController');
 });
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('poll/poll', 'Poll\\PollController');
+	Route::get('addQuestion/{id}', 'Poll\\PollController@addQuestion')->name('addQuestion');
+});
+Route::group(['middleware' => ['web']], function () {
+	Route::resource('poll/question', 'Poll\\QuestionController');
+});

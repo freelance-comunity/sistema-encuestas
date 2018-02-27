@@ -88,6 +88,17 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-clipboard"></i> Encuestas
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a href="{{url('/poll/poll')}}">Ver encuestas</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="menu_section">
