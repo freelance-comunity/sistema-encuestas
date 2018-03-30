@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Universidad Maya | Login</title>
+    <title>Sistema Escolar | Login</title>
     
     <!-- Bootstrap -->
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
@@ -47,8 +47,8 @@
 					<br />
                         
 					<div>
-						<h1><i class="fa fa-graduation-cap"></i> Universidad Maya</h1>
-						<p>&copy; {{ date('Y') }} Todos los derechos reservados. Universidad Maya.</p>
+						<h1><i class="fa fa-graduation-cap"></i> Sistema Escolar</h1>
+						<p>&copy; {{ date('Y') }} Todos los derechos reservados.</p>
 					</div>
 				</div>
 				{!! BootForm::close() !!}

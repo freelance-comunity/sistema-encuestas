@@ -3,7 +3,7 @@
         <div class="navbar nav_title" style="border: 0;">
             <a href="{{ url('/') }}" class="site_title">
                 <i class="fa fa-graduation-cap"></i>
-                <span>U M</span>
+                <span>S E</span>
             </a>
         </div>
 
